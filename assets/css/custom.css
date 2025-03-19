@@ -1,0 +1,214 @@
+.pagination--pager {
+  display: none !important;
+}
+
+.pagination {
+  display: none !important;
+}
+
+/* 🔹 메타 정보를 한 줄에 정렬하고 간격을 조금 줄이기 */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* 기존보다 살짝 줄임 */
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  padding: 4px 0; /* 여백 조정 */
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+/* 🔹 최대 소요 시간과 카테고리 사이의 공백을 살짝 줄이기 */
+.post-meta + .page__meta {
+  margin-top: 5px; /* 너무 붙지 않도록 조정 */
+}
+
+/* 🔹 요소 간격을 자연스럽게 유지 */
+.post-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 🔹 링크 스타일 */
+.post-meta a {
+  color: #007acc; /* VSCode 파랑색 */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+  color: #005fa3; /* 약간 진한 블루 */
+}
+
+/* 🔹 반응형 디자인 - 모바일에서 줄바꿈 지원 */
+@media (max-width: 768px) {
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+/* 🔹🔹 프로필 이미지(아바타) 스타일 수정 🔹🔹 */
+.sidebar .author__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* 정사각형 크기 지정 */
+  height: 120px;
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+.sidebar .author__avatar img {
+  width: 100%; /* 부모 요소에 맞춰 크기 유지 */
+  height: 100%; /* 정사각형 유지 */
+  border-radius: 50%; /* 원형으로 만들기 */
+  object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+}
+
+/* 제목과 카테고리 컨테이너를 감싸는 부모 요소 추가 */
+.categories-wrapper {
+  max-width: 1200px; /* 제목과 카테고리 카드 정렬을 맞추기 위해 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 20px;
+  text-align: left; /* 제목과 내용이 좌측 정렬되도록 설정 */
+}
+
+.categories-wrapper h1 {
+  margin-bottom: 20px; /* 제목과 카드 목록 간격 */
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 최소 250px, 최대 1fr */
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 1200px; /* 최대 너비 설정 */
+  margin: 0 auto 0 auto;
+  margin-left: auto;
+  padding-left: 0px;
+}
+
+/* 카드 크기 고정 (250px) */
+.category-card {
+  width: 250px; /* 고정 크기 */
+  height: auto; /* 높이는 콘텐츠에 따라 조정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: #333;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+/* 이미지 크기 고정 */
+.category-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 꽉 채우기 */
+}
+
+.category-text {
+  padding: 15px;
+}
+
+.category-text h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.category-text p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 반응형 조절 */
+@media (max-width: 600px) {
+  .category-container {
+    grid-template-columns: repeat(1, 1fr); /* 한 줄에 1개 */
+    justify-content: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .category-container {
+    grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개 */
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .category-container {
+    grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개 */
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1441px) {
+  .category-container {
+    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+    justify-content: flex-start;
+  }
+}
+/* .category-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.category-card {
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: #333;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.category-text {
+  padding: 15px;
+}
+
+.category-text h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.category-text p {
+  font-size: 14px;
+  color: #666;
+} */

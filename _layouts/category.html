@@ -2,9 +2,69 @@
 layout: archive
 ---
 
+{% if page.taxonomy %}
+  <div class="category-posts">
+    {% assign filtered_posts = site.posts | where: "categories", page.taxonomy %}
+    
+    {% if filtered_posts.size > 0 %}
+      {% for post in filtered_posts %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% else %}
+      <p>이 카테고리에 해당하는 글이 없습니다.</p>
+    {% endif %}
+  </div>
+
+{% else %}
+  <div class="category-container">
+    {% for category in site.categories %}
+      {% assign cat_name = category.first %}
+      {% assign cat_url = "/categories/" | append: cat_name | downcase | replace: " ", "-" %}
+      {% assign cat_image = site.data.category_images[cat_name] | default: "/assets/images/default.jpg" %}
+      
+      <a href="{{ cat_url }}" class="category-card">
+        <div class="category-image">
+          <img src="{{ cat_image }}" alt="{{ cat_name }}">
+        </div>
+        <div class="category-text">
+          <h3>{{ cat_name }}</h3>
+          <p>{{ site.data.category_descriptions[cat_name] | default: "No description available." }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- ---
+title: "Categories"
+layout: archive
+permalink: /categories/
+---
+<div class="category-container">
+  {% for category in site.categories %}
+    {% assign cat_name = category.first %}
+    {% assign cat_url = "/categories/" | append: cat_name | downcase | replace: " ", "-" %}
+    {% assign cat_image = site.data.category_images[cat_name] | default: "/assets/images/default.jpg" %}
+    
+    <a href="{{ cat_url }}" class="category-card">
+      <div class="category-image">
+        <img src="{{ cat_image }}" alt="{{ cat_name }}">
+      </div>
+      <div class="category-text">
+        <h3>{{ cat_name }}</h3>
+        <p>{{ site.data.category_descriptions[cat_name] | default: "No description available." }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div> -->
+
+<!-- ---
+layout: archive
+---
+
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
-</div>
+</div> -->
