@@ -6,6 +6,10 @@
   display: none !important;
 }
 
+.masthead {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
 /* 🔹 메타 정보를 한 줄에 정렬하고 간격을 조금 줄이기 */
 .post-meta {
   display: flex;
@@ -23,6 +27,8 @@
 .post-meta + .page__meta {
   margin-top: 5px; /* 너무 붙지 않도록 조정 */
 }
+
+.mast
 
 /* 🔹 요소 간격을 자연스럽게 유지 */
 .post-meta span {

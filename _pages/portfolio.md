@@ -31,7 +31,7 @@ classes: wide
 <div id="popupOverlay" class="popupOverlay">
   <div class="popupContent">
     <span class="closePopupBtn">&times;</span>
-    <h3 id="popupTitle"></h3>
+    <h3 id="popupTitle" hidden="true"></h3>
     <p id="popupText"></p>
   </div>
 </div>
@@ -39,13 +39,7 @@ classes: wide
 <!-- 🔹 개별 프로젝트 내용 (숨김) -->
 {% for item in site.portfolio %}
 <div id="portfolio{{ forloop.index }}" class="popupHidden">
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.excerpt }}</p>
-  <div class="popup-gallery">
-    {% for image in item.gallery %}
-      <img src="{{ image.image_path }}" alt="{{ image.alt }}">
-    {% endfor %}
-  </div>
+  {{ item.content | markdownify }} <!-- 🔹 Markdown 본문만 표시 -->
 </div>
 {% endfor %}
 
@@ -117,10 +111,10 @@ classes: wide
       color: #666;
     }
 
-    /* 🔹 기존 기본 리스트 스타일 제거 */
+    /* 🔹 기존 기본 리스트 스타일 제거
     .collection {
       display: none !important;
-    }
+    } */
 
     /* 🔹 popupHidden 요소 완전 숨김 */
     .popupHidden {
@@ -158,16 +152,50 @@ classes: wide
       justify-content: center;
       z-index: 10000;
     }
-
+    
     .popupContent {
       background: #fff;
       padding: 20px;
       border-radius: 6px;
       max-width: 800px;
-      width: 80%;
+      width: 80vw;
+      height: 80vh;
+      max-height: 800px; /* 🔹 팝업 내부 최대 높이 설정 */
+      overflow-y: auto; /* 🔹 팝업 내부 스크롤 가능 */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       position: relative;
       overflow-y: auto;
+      scrollbar-width: thin; /* Firefox 스크롤바 크기 */
+      scrollbar-color: #ccc transparent; /* 스크롤바 색상 */
+    }
+    /* Webkit 기반 브라우저 (Chrome, Edge, Safari) */
+    .popupContent::-webkit-scrollbar {
+      width: 8px; /* 스크롤바 두께 */
+    }
+
+    .popupContent::-webkit-scrollbar-track {
+      background: transparent; /* 스크롤바 트랙 배경 */
+      border-radius: 16px;
+    }
+
+    .popupContent::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3); /* 스크롤바 색상 */
+      border-radius: 16px; /* 둥근 모양 */
+      transition: background 0.3s ease-in-out;
+    }
+
+    .popupContent::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Edge 브라우저 */
+    .popupContent::-ms-scrollbar {
+      width: 8px;
+    }
+
+    .popupContent::-ms-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 16px;
     }
 
     /* 🔹 팝업 닫기 버튼 */
@@ -223,7 +251,9 @@ classes: wide
             popupTitle.textContent = title;
             popupText.innerHTML = contentElement.innerHTML;
 
+            popupText.innerHTML = contentElement.innerHTML; // 🔹 본문만 삽입
             popupOverlay.style.display = 'flex'; // 팝업 표시
+            document.body.style.overflow = 'hidden';  // 배경 스크롤 막기
         });
     });
 
@@ -231,6 +261,7 @@ classes: wide
     closePopupBtn.addEventListener('click', function() {
         console.log("🛑 팝업 닫기");
         popupOverlay.style.display = 'none'; // 팝업 닫기
+        document.body.style.overflow = 'auto';  // 배경 스크롤 복원
     });
 
     // 팝업 바깥 클릭 시 팝업 닫기
@@ -238,6 +269,7 @@ classes: wide
         if (e.target === popupOverlay) {
             console.log("🛑 팝업 바깥 클릭 -> 팝업 닫기");
             popupOverlay.style.display = 'none'; // 팝업 닫기
+            document.body.style.overflow = 'auto';  // 배경 스크롤 복원
         }
     });
 });

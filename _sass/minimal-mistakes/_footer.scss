@@ -13,7 +13,7 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
+  background-color: #ffffff00;
 
   footer {
     @include clearfix;
@@ -46,7 +46,7 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: $type-size-7;
+  font-size: 12px;
 }
 
 .page__footer-follow {
@@ -60,8 +60,8 @@
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
+    font-family: "Pretendard";
+    font-size: 14px;
     text-transform: uppercase;
   }
 
@@ -71,8 +71,9 @@
   }
 
   a {
-    padding-inline-end: 10px;
-    font-weight: bold;
+    padding-inline-end: 5px;
+    font-weight: normal;
+    font-size: 14px;
   }
 
   .social-icons {
