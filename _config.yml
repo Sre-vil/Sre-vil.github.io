@@ -198,6 +198,11 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 
 # Sass/SCSS
 sass:
@@ -320,10 +325,6 @@ defaults:
       related: true
       toc: false
       classes: wide
-      header:
-        overlay_image: https://source.unsplash.com/featured/?portfolio
-        overlay_filter: 0.4
-        caption: "Photo credit: [**Unsplash**](https://source.unsplash.com/featured/?portfolio)"
       
   # pages
   - scope:
