@@ -1,0 +1,9 @@
+<div class="message-box" style="border-color: {{ include.border | default: '#4ade80' }}">
+  <div class="message-box__icon" style="color: {{ include.icon_color | default: '#4ade80' }}">
+    <span class="material-symbols-outlined">{{ include.icon | default: 'info' }}</span>
+  </div>
+  <div class="message-box__contents">
+    <strong style="display: block; margin-bottom: 4px;">{{ include.title | default: '정보' }}</strong>
+    {{ include.content }}
+  </div>
+</div>

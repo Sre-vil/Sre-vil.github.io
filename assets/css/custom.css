@@ -1,3 +1,68 @@
+* {
+  word-break: keep-all !important;
+}
+
+blockquote {
+  position: relative;
+  margin: 0 0 0 1em; /* 위아래 여백 살짝 추가 */
+  padding: 0.5em 0.5em 0em 1em; /* 좌우 패딩 균형 조절 */
+  background-color: #f3f4f6; /* 연한 회색 배경 */
+  font-style: normal;
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  border-radius: 6px;
+  border-left: none !important;
+  overflow: hidden; /* ✅ margin collapsing 방지 */
+}
+
+blockquote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background-color: #9ca3af; /* 회색 선 */
+  border-radius: 2px;
+}
+
+blockquote > *:last-child {
+  margin-bottom: 0.5em !important;
+}
+
+.page__content {
+  font-family: "Pretendard"; /* author-profile에서 사용한 폰트 적용 */
+  font-weight: 400;
+  font-size: 16px; /* author-profile의 폰트 크기와 일관성 유지 */
+  color: var(--text-color); /* 기존 텍스트 색상 유지 */
+  margin-top: 10px;
+}
+
+.message-box {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #ecfdf5; /*#fff8db : 노랑계열*/
+  padding: 1em;
+  margin: 1.5em 0;
+}
+
+.message-box__icon {
+  font-size: 24px;
+  margin-right: 0.75em;
+}
+
+.message-box__contents p {
+  margin: 0;
+  color: #333;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
 .pagination--pager {
   display: none !important;
 }
