@@ -139,7 +139,6 @@ footer:
       icon: "fab fa-fw fa-linkedin-in"
       url: "www.linkedin.com/in/WooBinShin"
 
-
 # Reading Files
 include:
   - .htaccess
