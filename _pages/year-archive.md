@@ -4,5 +4,5 @@ permalink: /year-archive/
 layout: categories
 entries_layout: list
 author_profile: true
-#classes: wide
+classes: wide
 ---

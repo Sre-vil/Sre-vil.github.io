@@ -139,6 +139,10 @@ footer:
       icon: "fab fa-fw fa-linkedin-in"
       url: "www.linkedin.com/in/WooBinShin"
 
+after_footer_scripts:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - assets/js/mermaid.js
+
 # Reading Files
 include:
   - .htaccess
@@ -196,7 +200,16 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: plaintext
+    css_class: 'highlight'
+    block:
+      line_numbers: true
+      start_line: 1
+    span:
+      line_numbers: false
+      
 # Collections
 collections:
   portfolio:

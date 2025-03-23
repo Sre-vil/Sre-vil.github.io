@@ -2,11 +2,127 @@
   word-break: keep-all !important;
 }
 
+/* nodeLabel 클래스의 span 태그에서 기본 margin과 padding을 제거 */
+.nodeLabel {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* macOS 스타일 코드 블록 - 여백 및 자간 조정 */
+div.highlighter-rouge,
+figure.highlight {
+  position: relative;
+  margin: 1em 0 1em 1em; /* 다른 요소들과 동일한 좌측 여백 */
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: "Monaco", "Consolas", "Lucida Console", monospace
+  width: calc(100% - 1em); /* 너비 조정 */
+}
+
+/* 상단 원형 버튼 및 상단바 추가 */
+div.highlighter-rouge:before,
+figure.highlight:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff5f56;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  z-index: 1;
+}
+
+/* 상단바 추가 */
+div.highlighter-rouge:after,
+figure.highlight:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32px; /* 상단바 높이 */
+  background-color: #9ca3af; /* 갈색 계열 색상 */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px 10px 0 0; /* 상단 모서리만 둥글게 */
+  z-index: 0;
+}
+
+/* 코드 블록 내부 여백 조정 - 공백 축소 */
+div.highlighter-rouge pre.highlight,
+figure.highlight pre {
+  margin: 0;
+  padding: 45px 0.7rem 0.7rem; /* 상단 패딩 증가 - 상단바와 코드 사이 공백 추가 */
+  overflow-x: auto;
+}
+
+/* 코드 블록 내 코드 스타일 - 자간 및 줄간격 축소 */
+.highlight code {
+  font-family: "Monaco", "Consolas", "Lucida Console", monospace;
+  font-size: 1em;
+}
+
+/* 코드 블록 내부 요소 간 간격 조정 */
+.highlight .table-responsive {
+  margin-bottom: 0;
+}
+
+
+/* 밝은 배경에 잘 보이는 코드 하이라이팅 색상 */
+.highlight {
+  color: #383a42; /* 기본 텍스트 색상 */
+}
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs { color: #a0a1a7; } /* 주석 */
+.highlight .err { color: #e45649; } /* 에러 */
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt { color: #a626a4; } /* 키워드 */
+.highlight .o, .highlight .ow { color: #0184bc; } /* 연산자 */
+.highlight .p { color: #383a42; } /* 구두점 */
+.highlight .gd { color: #e45649; background-color: #f9e4e4; } /* diff 삭제 */
+.highlight .gi { color: #50a14f; background-color: #e6ffec; } /* diff 추가 */
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 { color: #c18401; } /* 문자열 */
+.highlight .nb, .highlight .bp { color: #c18401; } /* 내장 이름 */
+.highlight .nc { color: #e5c07b; } /* 클래스 이름 */
+.highlight .no { color: #e45649; } /* 상수 */
+.highlight .nd { color: #986801; } /* 데코레이터 */
+.highlight .ni { color: #986801; } /* 엔티티 이름 */
+.highlight .ne { color: #e45649; } /* 예외 */
+.highlight .nf, .highlight .fm { color: #4078f2; } /* 함수 이름 */
+.highlight .nl { color: #383a42; } /* 라벨 이름 */
+.highlight .nn { color: #383a42; } /* 네임스페이스 */
+.highlight .py { color: #383a42; } /* 속성 이름 */
+.highlight .nt { color: #0184bc; } /* 태그 */
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm, .highlight .n { color: #e45649; } /* 변수 */
+.highlight .w { color: #383a42; } /* 공백 */
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #986801; } /* 숫자 */
+.highlight .dl { color: #c18401; } /* 구분자 */
+
+/* 코드 블록 내부의 p, li, span 요소에는 margin-left를 0으로 설정 */
+.highlight p,
+.highlight li,
+.highlight span,
+pre p,
+pre li,
+pre span {
+  margin-left: 0 !important;
+}
+
+code.highlighter-rouge {
+  background-color: #f0f2f5;
+  border-radius: 3px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  color: #e83e8c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
 /* p, li, span 등 본문 내용이 blockquote와 동일한 위치에서 시작되도록 */
 .page__content p,
 .page__content li,
 .page__content span {
-  margin-left: 1em; 
+  margin-left: 1em;
 }
 
 blockquote {
