@@ -124,7 +124,7 @@ author:
       url: "mailto:defi622@naver.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin-in"
-      url: "www.linkedin.com/in/WooBinShin"
+      url: "https://www.linkedin.com/in/WooBinShin"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Sre-vil"
@@ -137,7 +137,7 @@ footer:
       url: "https://github.com/Sre-vil"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin-in"
-      url: "www.linkedin.com/in/WooBinShin"
+      url: "https://www.linkedin.com/in/WooBinShin"
 
 after_footer_scripts:
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
