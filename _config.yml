@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Srevil # the main title
 
-tagline: 공사 중입니다. # it will display as the subtitle
+tagline: 공사 중입니다. 언제 완성일진 몰라요. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
