@@ -39,3 +39,49 @@ blockquote {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+
+/* 팝업 이미지 링크를 위한 스타일 - 라이트 모드 */
+.popup.img-link img,
+.img-link img,
+a.popup img {
+  /* 기본 스타일 */
+  display: block;
+  margin: 1.5rem auto; /* 상하 여백과 중앙 정렬 */
+  max-width: 85%; /* 너무 크지 않게 최대 너비 설정 */
+  height: auto;
+  
+  /* 둥근 모서리와 배경 */
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #fafafa; /* 쨍하지 않은 흰색 배경 - 라이트 모드 */
+  
+  /* 그림자 효과 - 라이트 모드 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* 부드러운 전환 효과 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 마우스 호버 시 확대 및 그림자 강화 효과 - 라이트 모드 */
+.popup.img-link img:hover,
+.img-link img:hover,
+a.popup img:hover {
+  transform: scale(1.03); /* 3% 확대 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .popup.img-link img,
+  .img-link img,
+  a.popup img {
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4), 0 0 8px rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+  }
+
+  .popup.img-link img:hover,
+  .img-link img:hover,
+  a.popup img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.6); /* 강화된 그림자 효과 */
+  }
+}
