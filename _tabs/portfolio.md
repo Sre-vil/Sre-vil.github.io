@@ -5,7 +5,7 @@ order: 4
 ---
 
 <!-- wwwwwww -->
-<div style="display: flex; gap: 80px;">
+<!-- <div style="display: flex; gap: 80px;">
     <div>
         <img src="/assets/img/portfolio/profile.jpg" style="width:200px; height:auto;">
     </div>
@@ -133,10 +133,10 @@ order: 4
 
 - 2024 **정보처리기사** - 한국산업인력공단
     - 필기 합격 : 2024-03-13
-    - 실기 합격 : 2024-06-18
+    - 실기 합격 : 2024-06-18 -->
 
 <!-------------------------------- COM/RPC 기반 Windows 서비스 취약점 분석 -------------------------------------------->
-<div id="securityProject1" style="display:none;">
+<!-- <div id="securityProject1" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/security-project1.png">
     </div>
@@ -238,10 +238,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- 공개된 1-day 취약점 상세 분석 -------------------------------------------->
-<div id="securityProject2" style="display:none;">
+<!-- <div id="securityProject2" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/security-project2.png">
     </div>
@@ -309,10 +309,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- 울산대학교 웹 취약점 분석 -------------------------------------------->
-<div id="securityProject3" style="display:none;">
+<!-- <div id="securityProject3" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/security-project3.png">
     </div>
@@ -370,10 +370,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- 바이너리 분석기 개발 -------------------------------------------->
-<div id="securityProject4" style="display:none;">
+<!-- <div id="securityProject4" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/security-project4.png">
     </div>
@@ -420,10 +420,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- 무선 센서 네트워크 시각화 프로그램 개발 -------------------------------------------->
-<div id="developProject1" style="display:none;">
+<!-- <div id="developProject1" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/develop-project1.png">
     </div>
@@ -489,10 +489,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- JAVA 윈도우 프로그램 개발 -------------------------------------------->
-<div id="developProject2" style="display:none;">
+<!-- <div id="developProject2" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/develop-project2.png">
     </div>
@@ -537,10 +537,10 @@ order: 4
         </ul>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- OpenCV 활용 프로그램 개발 -------------------------------------------->
-<div id="developProject3" style="display:none;">
+<!-- <div id="developProject3" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/develop-project3.png">
     </div>
@@ -588,10 +588,10 @@ order: 4
         <b>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-------------------------------- TCP 서버/클라이언트 채팅 프로그램 개발 -------------------------------------------->
-<div id="developProject4" style="display:none;">
+<!-- <div id="developProject4" style="display:none;">
     <div style="text-align:center">
         <img class="popupImage" src="/assets/img/portfolio/develop-project4.png">
     </div>
@@ -639,10 +639,10 @@ order: 4
             <li><a target="_blank" href="https://github.com/kwakmu18/network-programming">C++ 프로그램</a></li>
         </b>
     </div>
-</div>
+</div> -->
 
 <!-- --------------------------------------------------------------------------------------------------------- -->
-
+<!-- 
 <style>
     .project-text-img {
         width:600px;
@@ -767,4 +767,4 @@ order: 4
         document.body.style.overflow = 'auto';
     }
     });
-</script>
+</script> -->
