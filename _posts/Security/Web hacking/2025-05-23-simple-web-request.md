@@ -73,6 +73,7 @@ STEP 1~2를 거쳐 FLAG 페이지에 도달하면 플래그가 출력됩니다.
             <input type="hidden" name="check" value="{{ hidden_num }}">
             <input type="submit"/><br/>
         </form>
+        {% endif %}
     ```
 
 - 두 번째 인자들의 입력같은 경우, `step2.html` 파일을 함께 참고  
