@@ -41,3 +41,11 @@ def binary_search(arr, target, start, end):
     else:
         return binary_search(arr, target, mid + 1, end)
 ```
+
+### 코드 작성 시 반드시 기억할 원리  
+- 입력되는 배열은 반드시 정렬되어 있어야 함  
+- 재귀함수를 사용하여 구현한다면 재귀적으로 `start`와 `end` 값을 변경해야 하므로, `start`와 `end`를 매개변수로 전달해야 함  
+- 항상 `(start+end)//2`로 중간값을 구해야 함  
+- `start`가 `end`보다 커지면 탐색을 종료해야 함  
+- `arr[mid] > target`인 경우, `mid`를 다시 확인하지 않기 위해 `end = mid - 1`로 설정해야 함  
+- `arr[mid] < target`인 경우, `mid`를 다시 확인하지 않기 위해 `start = mid + 1`로 설정해야 함  
